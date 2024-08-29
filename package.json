@@ -1,0 +1,27 @@
+{
+  "name": "cypress_learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test-electron": "cypress run --spec \"cypress\\e2e\\TC17_POM_Implementation.spec.cy.js\"",
+    "smoke-test": "cypress run --spec \"cypress\\e2e\\SmokeTest\\SmokeFirstScript.spec.cy.js\"",
+    "test-electron-headed": "cypress run --headed",
+    "test-chrome": "cypress run --browser chrome",
+    "test-chrome-headed": "cypress run --browser chrome --headed",
+    "test-dashboard":"npx cypress run --record --key 4da03a8c-1f54-41a0-afd1-b775ea25af33"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.13.3"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.7.3",
+    "neat-csv": "^5.2.0",
+    "xlsx": "^0.18.5"
+  }
+}
