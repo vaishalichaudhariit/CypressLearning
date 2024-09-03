@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-29T15:39:20.795Z",
+    "end": "2024-08-29T15:39:29.774Z",
+    "duration": 8979,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fe648978-9cb5-4724-9b18-44c116803f45",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cucumber\\feature\\conduitLogin.feature",
+      "file": "cypress\\e2e\\cucumber\\feature\\conduitLogin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "541c0967-fcf9-4a84-801b-517b3157bdcc",
+          "title": "Conduit Login Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and Logout with Valid Credentials",
+              "fullTitle": "Conduit Login Functionality Login and Logout with Valid Credentials",
+              "timedOut": null,
+              "duration": 8799,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/conduitLogin.feature/Conduit Login Functionality -- Login and Logout with Valid Credentials (failed).png\"",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settings1' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settings1' but never did.\n    at HomePage.clickElement (cypress/e2e/cucumber/pages/basePage.js:12:15)\n    at HomePage.clickSettingsButton (cypress/e2e/cucumber/pages/homePage.js:22:13)\n    at Context.eval (cypress/e2e/cucumber/stepDefinitions/conduitLogin/conduitLogin_stepdef.js:29:12)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
+                "diff": null
+              },
+              "uuid": "365c4405-6a88-49be-9287-ebd24a51ca6e",
+              "parentUUID": "541c0967-fcf9-4a84-801b-517b3157bdcc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "365c4405-6a88-49be-9287-ebd24a51ca6e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8799,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "Json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

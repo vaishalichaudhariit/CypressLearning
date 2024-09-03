@@ -15,6 +15,15 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import addContext from 'mochawesome/addContext'
 
+require('cypress-xpath')
+Cypress.on('test:after:run',(test,runnable)=>{
+    if(test.state === 'failed'){
+        const screenShot = `assets/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`
+        addContext({ test }, screenShot)
+    }
+    
+})
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
